@@ -9,9 +9,10 @@ import {
   MenuItem,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { FaLocationDot } from "react-icons/fa6";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+import SetLocation from "./SetLocation";
 
 const Navbar = () => {
   return (
@@ -19,17 +20,14 @@ const Navbar = () => {
       justifyContent={"space-between"}
       w="full"
       px={4}
-      pt={1}
+      py={1}
       alignItems={"center"}
     >
       <HStack alignItems={"center"}>
         <Link to="/">
           <Image src="/images/nav-logo.png" alt="Logo" w="168px" h="50px" />
         </Link>
-        <HStack>
-          <FaLocationDot fontSize={"23px"} />
-          <ChevronDownIcon />
-        </HStack>
+        <SetLocation />
       </HStack>
       <HStack alignItems={"center"} gap={12}>
         <Link>Gift System</Link>
@@ -55,10 +53,15 @@ const Navbar = () => {
             </HStack>
           </MenuButton>
           <MenuList>
-            <MenuItem>About Us</MenuItem>
-            <MenuItem>Privacy Policy</MenuItem>
+            <MenuItem>
+              <Link to={"/about"}>About Us</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to={"/privacy-policy"}>Privacy Policy</Link>
+            </MenuItem>
           </MenuList>
         </Menu>
+        <HashLink to="#footer">Contact Us</HashLink>
         <MdOutlineShoppingCart fontSize={"24px"} />
       </HStack>
     </HStack>

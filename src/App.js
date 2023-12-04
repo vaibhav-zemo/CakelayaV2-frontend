@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home';
 import About from './pages/About';
 import DefaultLayout from './layouts/Default';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Route path='/' element={<DefaultLayout />}>
         <Route index element={<Home />} />
         <Route exact path="/about" element={<About />} />
+        <Route exact path='/privacy-policy' element={<PrivacyPolicy />} />
       </Route>
     </Routes>
   );

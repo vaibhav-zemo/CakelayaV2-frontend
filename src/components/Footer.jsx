@@ -14,10 +14,10 @@ const Footer = () => {
     <Grid
       px={4}
       pb={4}
-      templateColumns="repeat(3, 1fr)"
+      templateColumns={{base: "", md: "repeat(3, 1fr)"}}
+      templateRows={{base: "repeat(1, 1fr)", md: ""}}
       gap={8}
-      position={"fixed"}
-      bottom={0}
+      id="footer"
     >
       <GridItem display={"flex"} flexDir={"column"} gap={4}>
         <Heading>About Cakeलाया ?</Heading>
