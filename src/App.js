@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import DefaultLayout from './layouts/Default';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Product from './pages/Product';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route index element={<Home />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path='/privacy-policy' element={<PrivacyPolicy />} />
+        <Route exact path='/product/:id' element={<Product />} />
       </Route>
     </Routes>
   );

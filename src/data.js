@@ -7,7 +7,7 @@ export const SultanpurSlides = [
     bg: "images/back.jpg",
     cat: "Butterscotch",
     price: 289,
-    height: "70%"
+    height: "400px"
   },
   {
     id: 1,
@@ -57,7 +57,7 @@ export const SultanpurSlides = [
     bg: "images/back.jpg",
     cat: "Chocolate",
     price: 319,
-    height: "60%"
+    height: "400px"
   },
   {
     id: 6,
@@ -77,7 +77,7 @@ export const SultanpurSlides = [
     bg: "images/back.jpg",
     cat: "Designer",
     price: 599,
-    height: "65%"
+    height: "400px"
   },
   {
     id: 8,
@@ -87,7 +87,7 @@ export const SultanpurSlides = [
     bg: "images/back.jpg",
     cat: "Red Velvet",
     price: 449,
-    height: "65%"
+    height: "400px"
   },
   {
     id: 9,
@@ -97,7 +97,7 @@ export const SultanpurSlides = [
     bg: "images/back.jpg",
     cat: "Special",
     price: 319,
-    height: "61%"
+    height: "400px"
   },
 ];
 

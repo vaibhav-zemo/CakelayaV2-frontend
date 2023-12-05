@@ -38,7 +38,7 @@ const Navbar = () => {
               <ChevronDownIcon />
             </HStack>
           </MenuButton>
-          <MenuList>
+          <MenuList zIndex={100} >
             <MenuItem>My Profile</MenuItem>
             <MenuItem>My Orders</MenuItem>
             <MenuItem>Admin</MenuItem>

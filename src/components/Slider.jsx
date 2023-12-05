@@ -2,7 +2,15 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { SultanpurSlides } from "../data";
-import { Image, HStack, Heading, Text, VStack, Button } from "@chakra-ui/react";
+import {
+  Image,
+  HStack,
+  Flex,
+  Heading,
+  Text,
+  VStack,
+  Button,
+} from "@chakra-ui/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -42,8 +50,14 @@ const Slider = () => {
             backgroundSize: "cover",
           }}
         >
-          <HStack px={16} gap={40} justifyContent={"space-between"}>
-            <Image src={slide.img} alt={slide.title} h={slide.height} />
+          <Flex
+            px={16}
+            gap={{ base: 4, tablet: 40 }}
+            justifyContent={"space-between"}
+            flexDir={{ base: "column", tablet: "row" }}
+            alignItems={"center"}
+          >
+            <Image src={slide.img} alt={slide.title} />
             <VStack gap={0} alignItems={"start"}>
               <Heading fontSize={"5xl"}>{slide.title}</Heading>
               <Text
@@ -61,7 +75,7 @@ const Slider = () => {
                 </Text>
               </HStack>
             </VStack>
-          </HStack>
+          </Flex>
         </SwiperSlide>
       ))}
     </Swiper>
