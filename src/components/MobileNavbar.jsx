@@ -33,7 +33,9 @@ const MobileNavbar = () => {
         <SetLocation />
       </HStack>
       <HStack gap={4}>
-        <MdOutlineShoppingCart fontSize={"24px"} />
+        <Link to={'/cart'} >
+          <MdOutlineShoppingCart fontSize={"24px"} />
+        </Link>
         <Menu>
           <MenuButton onClick={onOpen}>
             <HamburgerIcon fontSize={"25px"} />

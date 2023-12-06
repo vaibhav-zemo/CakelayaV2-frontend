@@ -38,7 +38,7 @@ const Navbar = () => {
               <ChevronDownIcon />
             </HStack>
           </MenuButton>
-          <MenuList zIndex={100} >
+          <MenuList zIndex={100}>
             <MenuItem>My Profile</MenuItem>
             <MenuItem>My Orders</MenuItem>
             <MenuItem>Admin</MenuItem>
@@ -52,7 +52,7 @@ const Navbar = () => {
               <ChevronDownIcon />
             </HStack>
           </MenuButton>
-          <MenuList>
+          <MenuList zIndex={100}>
             <MenuItem>
               <Link to={"/about"}>About Us</Link>
             </MenuItem>
@@ -62,7 +62,9 @@ const Navbar = () => {
           </MenuList>
         </Menu>
         <HashLink to="#footer">Contact Us</HashLink>
-        <MdOutlineShoppingCart fontSize={"24px"} />
+        <Link to={'/cart'}>
+          <MdOutlineShoppingCart fontSize={"24px"} />
+        </Link>
       </HStack>
     </HStack>
   );

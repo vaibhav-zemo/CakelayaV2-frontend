@@ -86,7 +86,7 @@ const Home = () => {
           alignItems={"center"}
         >
           {products.map((product) => (
-            <Link key={product._id} to={`http://localhost:3000/product/${product._id}`} >
+            <Link key={product._id} to={`/product/${product._id}`} >
               <VStack
                 gap={4}
                 height={"350px"}

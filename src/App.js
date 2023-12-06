@@ -5,6 +5,7 @@ import About from './pages/About';
 import DefaultLayout from './layouts/Default';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Product from './pages/Product';
+import Cart from './pages/Cart';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route exact path="/about" element={<About />} />
         <Route exact path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route exact path='/product/:id' element={<Product />} />
+        <Route exact path='/cart' element={<Cart />} />
       </Route>
     </Routes>
   );

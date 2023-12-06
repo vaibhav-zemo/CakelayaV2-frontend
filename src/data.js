@@ -204,26 +204,40 @@ export const NoidaSlides = [
   },
 ];
 
-export const categories = [
+export const cartItems = [
   {
-    id: 1,
-    img: "images/b&n.jpg",
-    title: "Cookies & Namkeens",
-    cat: "Cookies and Namkeens",
+    id: '647b59828d9f81a2a7e51ed6',
+    title: 'Butterscotch Cake',
+    price: 289,
+    img: 'https://i.ibb.co/M2spKJg/IMG-9627.jpg',
+    quantity: 1,
+    weight: 0.5,
   },
   {
-    id: 2,
-    img: "images/food.jpg",
-    title: "Foods & Beverages",
-    cat: "Foods and Beverages",
+    id: '6447b59828d9f81a2a7e51ed6',
+    title: 'Butterscotch Cake',
+    price: 289,
+    img: 'https://i.ibb.co/M2spKJg/IMG-9627.jpg',
+    quantity: 1,
+    weight: 0.5,
   },
   {
-    id: 3,
-    img: "images/paste.jpg",
-    title: "Pastries",
-    cat: "Pastries",
+    id: '647b559828d9f81a2a7e51ed6',
+    title: 'Butterscotch Cake',
+    price: 289,
+    img: 'https://i.ibb.co/M2spKJg/IMG-9627.jpg',
+    quantity: 1,
+    weight: 0.5,
   },
-];
+  {
+    id: '647b259828d9f81a2a7e51ed6',
+    title: 'Butterscotch Cake',
+    price: 289,
+    img: 'https://i.ibb.co/M2spKJg/IMG-9627.jpg',
+    quantity: 1,
+    weight: 0.5,
+  }
+]
 
 export const popularProducts = [
   {
