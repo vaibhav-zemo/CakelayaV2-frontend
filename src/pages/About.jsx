@@ -162,6 +162,15 @@ const About = () => {
           </Highlight>
         </Box>
       </Box>
+      <Box>
+        <Heading style={headingStyle} >Shipping Policy</Heading>
+        <Text mb={4}>
+          All the cakes are delivered to you by third-party bakery vendors, and
+          the company hold no responsibilities for the same. We are just an
+          online platform which enables local bakers to list on our platform and
+          sell their products online.
+        </Text>
+      </Box>
     </VStack>
   );
 };

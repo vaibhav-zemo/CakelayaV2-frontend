@@ -7,6 +7,11 @@ import {
   Text,
   Select,
   Image,
+  Card,
+  CardBody,
+  CardFooter,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
 import Slider from "../components/Slider";
 import { publicRequest } from "../requestMethods";
@@ -79,32 +84,44 @@ const Home = () => {
           </Flex>
         </HStack>
 
-        <Flex
-          gap={6}
-          flexWrap={"wrap"}
-          justifyContent={"space-between"}
-          alignItems={"center"}
+        <Grid
+          px={4}
+          gap={8}
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            mob: "repeat(2, 1fr)",
+            md: "repeat(2, 1fr)",
+            tablet: "repeat(4, 1fr)",
+            lg: "repeat(5, 1fr)",
+          }}
         >
           {products.map((product) => (
-            <Link key={product._id} to={`/product/${product._id}`} >
-              <VStack
-                gap={4}
-                height={"350px"}
-                minW={"280px"}
-                border={"2px solid whitesmoke"}
-                boxShadow={"rgba(0,0,0,0.35) 0px 5px 15px"}
-                px={10}
-                py={4}
-                alignItems={"center"}
-                justifyContent={"center"}
-              >
-                <Image src={product.img} h={60} />
-                <Text>{product.title}</Text>
-                <Text>₹{product.price[0]}</Text>
-              </VStack>
-            </Link>
+            <GridItem key={product._id}>
+              <Link to={`/product/${product._id}`}>
+                <Card
+                  border={"2px solid whitesmoke"}
+                  boxShadow={"rgba(0,0,0,0.35) 0px 5px 15px"}
+                  h="400px"
+                >
+                  <CardBody display={'flex'} justifyContent={'center'} >
+                    <Image
+                      w={"250px"}
+                      h={"250px"}
+                      objectFit={"contain"}
+                      src={product.img}
+                    />
+                  </CardBody>
+                  <CardFooter w="full">
+                    <VStack fontWeight={"500"} alignItems={"center"} w="full">
+                      <Text textAlign={"center"}>{product.title}</Text>
+                      <Text>₹ {product.price[0]}</Text>
+                    </VStack>
+                  </CardFooter>
+                </Card>
+              </Link>
+            </GridItem>
           ))}
-        </Flex>
+        </Grid>
       </VStack>
     </VStack>
   );
