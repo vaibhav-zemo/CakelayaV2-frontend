@@ -8,6 +8,7 @@ import {
   ListItem,
   Highlight,
   Link,
+  Flex,
 } from "@chakra-ui/react";
 
 const PrivacyPolicy = () => {
@@ -133,14 +134,14 @@ const PrivacyPolicy = () => {
             Advertising Principles. They are put in place to provide a positive
             experience for users.
           </Text>
-          <Box display={"flex"}>
+          <Flex flexWrap={"wrap"}>
             <Text mr={1} fontWeight={"700"}>
               Link:
             </Text>
-            <Link color={'blue'} href="" textDecor={'underline'} >
-              https://support.google.com/adwordspolicy/answer/1316548?hl=en
+            <Link color={"blue"} href="https://support.google.com/adwordspolicy/answer/1316548?hl=en" target="_blank" textDecor={"underline"}>
+              <Text>Support.google</Text>
             </Link>
-          </Box>
+          </Flex>
           <Text>We have not enabled Google AdSense on our website.</Text>
         </Box>
         <Box>
